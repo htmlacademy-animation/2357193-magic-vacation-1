@@ -24,7 +24,7 @@
 
   .social-block__toggler {
     &::before {
-      animation: social-block__toggler 1s linear 0.5s forwards;
+      animation: social-block__toggler 1s linear 0.5s;
     }
   }
 }
