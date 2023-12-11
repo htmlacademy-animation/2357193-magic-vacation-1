@@ -1,7 +1,7 @@
 @keyframes fadeInBottom {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(3rem);
   }
 
   100% {
@@ -13,7 +13,7 @@
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateX(3rem);
   }
 
   100% {
@@ -22,7 +22,7 @@
   }
 }
 
-@keyframes increase {
+@keyframes formIncrease {
   0% {
     padding-left: calc(100% - 31rem);
   }
@@ -32,14 +32,23 @@
   }
 }
 
-@keyframes social {
+@keyframes social-block__toggler {
+  0% {
+    height: 0;
+    width: 0;
+  }
+
   50% {
-    opacity: 0;
-    transform: translateY(20px);
+    height: 112.5%;
+    width: 112.5%;
   }
 
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    height: 100%;
+    width: 100%;
   }
+}
+
+.fade-in-right {
+  animation: fadeInRight ease 1s;
 }
