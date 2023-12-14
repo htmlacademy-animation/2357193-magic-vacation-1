@@ -54,3 +54,21 @@
     transform: translateY(0);
   }
 }
+
+@keyframes rulesItemNumerics {
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rulesGoBtn {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes rulesGoBtnText {
+  100% {
+    color: #5f458c;
+  }
+}
