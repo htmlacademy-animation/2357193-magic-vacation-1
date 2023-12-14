@@ -49,6 +49,8 @@
   }
 }
 
-.fade-in-right {
-  animation: fadeInRight ease 1s;
+@keyframes screenFill {
+  100% {
+    transform: translateY(0);
+  }
 }

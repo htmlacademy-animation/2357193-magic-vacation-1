@@ -1,0 +1,13 @@
+.screen-fill {
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+  width: 100vw;
+  height: 100vh;
+  transform: translateY(100%);
+  background-color: #5f458c;
+
+  &--active {
+    animation: screenFill ease 0.3s forwards;
+  }
+}

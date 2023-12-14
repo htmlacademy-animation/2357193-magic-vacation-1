@@ -96,7 +96,15 @@
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
-  animation: fadeInRight ease 1s;
+  opacity: 0;
+
+  .swiper-slide-active & {
+    animation: fadeInRight ease 1s forwards;
+  }
+
+  .swiper-slide-next & {
+    animation: fadeInRight ease 1s forwards 0.3s;
+  }
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;
