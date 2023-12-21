@@ -127,8 +127,22 @@
 }
 
 .form--result {
+  opacity: 0;
+  animation: formIncrease linear 0.4s forwards 1s;
+
   .form__field {
     width: calc(100% - 31rem);
+
+    &::placeholder {
+      opacity: 0;
+      transition: opacity 1s linear;
+    }
+
+    &--opacity-show {
+      &::placeholder {
+        opacity: 1;
+      }
+    }
 
     @media (min-width: $stop-scaling) {
       width: calc(100% - 310px);

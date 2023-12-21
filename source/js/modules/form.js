@@ -6,11 +6,18 @@ export default () => {
     } else {
       el.placeholder = `e-mail для регистации результата и получения приза`;
     }
+    el.classList.add('form__field--opacity-show');
   };
   for (let i = 0; i < emailFields.length; i++) {
-    adaptPlaceholder(emailFields[i]);
+    //adaptPlaceholder(emailFields[i]);
     window.addEventListener(`resize`, function () {
       adaptPlaceholder(emailFields[i]);
+    });
+    document.body.addEventListener(`show-result`, function () {
+      setTimeout(() => {
+        adaptPlaceholder(emailFields[i]);
+      }, 2000);
+      
     });
   }
 };
