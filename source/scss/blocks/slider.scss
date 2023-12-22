@@ -88,6 +88,40 @@
     margin-left: -2.5rem;
     font-size: 3rem;
   }
+
+  span {
+    // 1
+    span:nth-child(3) {
+      transition: transform $duration ease 0s;
+    }
+
+    span:nth-child(7) {
+      transition: transform $duration ease 0s;
+    }
+
+    // 2
+    span:nth-child(2) {
+      transition: transform $duration ease 80ms;
+    }
+
+    span:nth-child(4) {
+      transition: transform $duration ease 80ms;
+    }
+
+    span:nth-child(6) {
+      transition: transform $duration ease 80ms;
+    }
+
+    // 3
+    span:nth-child(5) {
+      transition: transform $duration ease 160ms;
+    }
+
+    // 4
+    span:nth-child(1) {
+      transition: transform $duration ease 240ms;
+    }
+  }
 }
 
 .slider__item-text {

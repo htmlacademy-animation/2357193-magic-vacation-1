@@ -1,4 +1,5 @@
 import throttle from 'lodash/throttle';
+import AccentTypographyBuild from './accentTypographyBuild';
 
 export default class FullPageScroll {
   constructor() {
@@ -56,20 +57,7 @@ export default class FullPageScroll {
   changeVisibilityDisplay() {
     this.screenFill = document.querySelector(`.screen-fill`);
 
-    /*if(this.screenElements[this.activeScreen].id == 'prizes') this.screenFill.classList.add('screen-fill--active');*/
-
-    /*setTimeout(() => {
-      this.screenElements.forEach((screen) => {
-        screen.classList.add(`screen--hidden`);
-          screen.classList.remove(`active`);
-      });
-  
-      this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
-      setTimeout(() => {
-        this.screenElements[this.activeScreen].classList.add(`active`);
-      }, 100);
-      this.screenFill.classList.remove('screen-fill--active');
-    }, 300); */
+    this.accentTypographyRun();
 
     this.screenElements.forEach((screen) => {
       screen.classList.add(`screen--hidden`);
@@ -107,6 +95,43 @@ export default class FullPageScroll {
       this.activeScreen = Math.min(this.screenElements.length - 1, ++this.activeScreen);
     } else {
       this.activeScreen = Math.max(0, --this.activeScreen);
+    }
+  }
+
+  accentTypographyRun() {
+    if(this.screenElements[this.activeScreen].id == 'top') {
+      const animationTopScreenTextLine = new AccentTypographyBuild(`.intro__title`, `text-word--intro`);
+        setTimeout(()=>{
+          animationTopScreenTextLine.runAnimation();
+        }, 500);
+        const animationDate = new AccentTypographyBuild(`.intro__date`, `text-word`);
+        setTimeout(()=>{
+          animationDate.runAnimation();
+        }, 1500);
+    }
+    else if(this.screenElements[this.activeScreen].id == 'story') {
+      const animationTopScreenTextLine = new AccentTypographyBuild(`.slider__item-title`, `text-word`);
+        setTimeout(()=>{
+          animationTopScreenTextLine.runAnimation();
+        }, 200);
+    }
+    else if(this.screenElements[this.activeScreen].id == 'prizes') {
+      const animationTopScreenTextLine = new AccentTypographyBuild(`.prizes__title`, `text-word`);
+        setTimeout(()=>{
+          animationTopScreenTextLine.runAnimation();
+        }, 200);
+    }
+    else if(this.screenElements[this.activeScreen].id == 'rules') {
+      const animationTopScreenTextLine = new AccentTypographyBuild(`.rules__title`, `text-word`);
+        setTimeout(()=>{
+          animationTopScreenTextLine.runAnimation();
+        }, 200);
+    }
+    else if(this.screenElements[this.activeScreen].id == 'game') {
+      const animationTopScreenTextLine = new AccentTypographyBuild(`.game__title`, `text-word`);
+        setTimeout(()=>{
+          animationTopScreenTextLine.runAnimation();
+        }, 200);
     }
   }
 }

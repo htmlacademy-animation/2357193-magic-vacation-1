@@ -1,3 +1,13 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeInBottom {
   0% {
     opacity: 0;
@@ -24,10 +34,12 @@
 
 @keyframes formIncrease {
   0% {
+    opacity: 0;
     padding-left: calc(100% - 31rem);
   }
 
   100% {
+    opacity: 1;
     padding-left: 0;
   }
 }
@@ -55,20 +67,176 @@
   }
 }
 
-@keyframes rulesItemNumerics {
+@keyframes rulesItemBullets {
   100% {
     transform: scale(1);
   }
 }
 
 @keyframes rulesGoBtn {
+  85% {
+    border-radius: 4rem;
+  }
+
   100% {
-    width: 100%;
+    transform: scale(1, 1) translate(-50%, -50%);
+    border-radius: 3.5rem;
   }
 }
 
 @keyframes rulesGoBtnText {
   100% {
     color: #5f458c;
+  }
+}
+
+@keyframes flamingo {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem) rotate(-8deg);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateY(-1rem) rotate(5deg);
+  }
+
+  50% {
+    transform: translateY(1rem) rotate(-5deg);
+  }
+
+  75% {
+    transform: translateY(-0.5rem) rotate(3deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes suitcase {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem) scale(0);
+  }
+
+  80% {
+    transform: translateY(-5rem) scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes blueLeafLeft {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+
+  16.6% {
+    opacity: 1;
+    transform: rotate(-20deg);
+  }
+
+  33.2% {
+    opacity: 1;
+    transform: rotate(20deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(-10deg);
+  }
+
+  66.6% {
+    opacity: 1;
+    transform: rotate(10deg);
+  }
+
+  83.2% {
+    opacity: 1;
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+
+@keyframes blueLeafRight {
+  0% {
+    opacity: 0;
+    transform: rotate(-10deg);
+  }
+
+  16.6% {
+    transform: rotate(30deg);
+  }
+
+  33.2% {
+    opacity: 1;
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(20deg);
+  }
+
+  66.6% {
+    opacity: 1;
+    transform: rotate(5deg);
+  }
+
+  83.2% {
+    opacity: 1;
+    transform: rotate(15deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes greenLeaf {
+  0% {
+    opacity: 0;
+    transform: rotate(-20deg);
+  }
+
+  16.6% {
+    opacity: 1;
+    transform: rotate(20deg);
+  }
+
+  33.2% {
+    opacity: 1;
+    transform: rotate(-15deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: rotate(8deg);
+  }
+
+  66.6% {
+    opacity: 1;
+    transform: rotate(-8deg);
+  }
+
+  83.2% {
+    opacity: 1;
+    transform: rotate(3deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0);
   }
 }

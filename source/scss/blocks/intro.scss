@@ -25,7 +25,7 @@
 
 .intro__title {
   margin: 0;
-  max-width: 99rem;
+  max-width: 100rem;
   text-transform: uppercase;
   font-family: $font-alt;
   font-weight: 400;
@@ -93,7 +93,8 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.27;
-  animation: fadeInBottom ease 0.5s;
+  opacity: 0;
+  animation: fadeInBottom ease 0.5s forwards 1s;
 
   @media (min-width: $stop-scaling) {
     width: 509px;
@@ -142,6 +143,8 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.2;
+  opacity: 0;
+  animation: fadeIn ease 0.5s forwards 1.5s;
 
   @media (min-width: $stop-scaling) {
     margin: 0 0 16px;

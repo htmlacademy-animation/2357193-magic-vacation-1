@@ -1,0 +1,169 @@
+.text-word {
+  display: inline-block;
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.text-word > span {
+  transform: translate3d(0, 5rem, 0);
+  display: inline-block;
+}
+
+.text-word--intro {
+  display: inline-block;
+  //margin: 0 5px;
+  overflow: hidden;
+}
+
+.text-word--intro > span {
+  transform: translate3d(0, 14rem, 0);
+  display: inline-block;
+}
+
+.intro__title.active .text-word--intro > span {
+  transform: translate3d(0, 2rem, 0);
+
+  @media (max-width: $tablet) and (orientation: portrait) {
+    transform: translate3d(0, 0.6rem, 0);
+  }
+
+  @media (max-width: $mobile) and (orientation: landscape) {
+    transform: translate3d(0, 0.3rem, 0);
+  }
+}
+
+.slider__item-title.active .text-word > span,
+.prizes__title.active .text-word > span,
+.rules__title.active .text-word > span,
+.game__title.active .text-word > span,
+.intro__date.active .text-word > span {
+  transform: translate3d(0, 0.5rem, 0);
+}
+
+.intro__title {
+  span:nth-child(1) {
+    // Таинственный отпуск
+    // 1 - ГРУППА
+    span:nth-child(3) {
+      transition: transform $duration ease 20ms;
+    }
+
+    span:nth-child(7) {
+      transition: transform $duration ease 20ms;
+    }
+
+    span:nth-child(10) {
+      transition: transform $duration ease 20ms;
+    }
+
+    span:nth-child(12) {
+      transition: transform $duration ease 20ms;
+    }
+
+    // 2 - ГРУППА
+    span:nth-child(2) {
+      transition: transform $duration ease 80ms;
+    }
+
+    span:nth-child(4) {
+      transition: transform $duration ease 80ms;
+    }
+
+    span:nth-child(6) {
+      transition: transform $duration ease 80ms;
+    }
+
+    // 3 - ГРУППА
+    span:nth-child(1) {
+      transition: transform $duration ease 140ms;
+    }
+
+    span:nth-child(5) {
+      transition: transform $duration ease 140ms;
+    }
+
+    span:nth-child(9) {
+      transition: transform $duration ease 140ms;
+    }
+
+    span:nth-child(11) {
+      transition: transform $duration ease 140ms;
+    }
+
+    // 4
+    span:nth-child(8) {
+      transition: transform $duration ease 200ms;
+    }
+  }
+
+  span:nth-child(2) {
+    // 5
+    span:nth-child(4) {
+      transition: transform $duration ease 320ms;
+    }
+
+    span:nth-child(6) {
+      transition: transform $duration ease 320ms;
+    }
+
+    // 6
+    span:nth-child(3) {
+      transition: transform $duration ease 380ms;
+    }
+
+    // 7
+    span:nth-child(1) {
+      transition: transform $duration ease 440ms;
+    }
+
+    span:nth-child(5) {
+      transition: transform $duration ease 440ms;
+    }
+
+    //8
+    span:nth-child(2) {
+      transition: transform $duration ease 500ms;
+    }
+  }
+}
+
+.slider__item-title,
+.prizes__title,
+.rules__title,
+.game__title,
+.intro__date {
+  span {
+    // 1
+    span:nth-child(3) {
+      transition: transform $duration ease 0s;
+    }
+
+    span:nth-child(7) {
+      transition: transform $duration ease 0s;
+    }
+
+    // 2
+    span:nth-child(2) {
+      transition: transform $duration ease 80ms;
+    }
+
+    span:nth-child(4) {
+      transition: transform $duration ease 80ms;
+    }
+
+    span:nth-child(6) {
+      transition: transform $duration ease 80ms;
+    }
+
+    // 3
+    span:nth-child(5) {
+      transition: transform $duration ease 160ms;
+    }
+
+    // 4
+    span:nth-child(1) {
+      transition: transform $duration ease 240ms;
+    }
+  }
+}
+

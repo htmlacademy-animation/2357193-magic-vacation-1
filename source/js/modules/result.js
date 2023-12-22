@@ -5,6 +5,14 @@ export default () => {
     for (let i = 0; i < showResultEls.length; i++) {
       showResultEls[i].addEventListener(`click`, function () {
         let target = showResultEls[i].getAttribute(`data-target`);
+
+        const event = new CustomEvent(`show-result`, {
+          detail: {
+            'target': target,
+          }
+        });
+        document.body.dispatchEvent(event);
+
         [].slice.call(results).forEach(function (el) {
           el.classList.remove(`screen--show`);
           el.classList.add(`screen--hidden`);
