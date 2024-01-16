@@ -177,6 +177,7 @@
   font-size: 2.4rem;
   line-height: 1.2;
   color: $c-light;
+  animation: fadeIn ease-in 1s;
 
   @media (min-width: $stop-scaling) {
     margin: auto auto 10px;
@@ -209,6 +210,7 @@
     width: 4rem;
     height: 4rem;
     color: $c-dark;
+    animation: rollingBtnRight 1s forwards;
 
     @media (min-width: $stop-scaling) {
       margin-left: 15px;

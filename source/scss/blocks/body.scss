@@ -27,3 +27,166 @@
     }
   }
 }
+
+.slider-change {
+  &--index-1 {
+    .page-header__menu {
+      a {
+        &:hover,
+        &:focus {
+          color: $c-dark;
+
+          &::after {
+            background-color: $c-dark;
+          }
+        }
+      }
+    }
+
+    .social-block__toggler {
+      color: $c-purple; // цвет иконки соц сети
+
+      &::before {
+        background-color: $c-light; // цвет фон соц сети
+        border: 2px solid $c-light;
+      }
+
+      &:hover,
+      .social-block--active & {
+        color: $c-dark; // цвет иконки при hover
+      }
+
+      &:focus {
+        color: $c-dark;
+        border: 2px solid $c-dark;
+
+        &::before {
+          border-color: $c-dark;
+        }
+      }
+
+      &:active {
+        color: $c-dark;
+
+        &::before {
+          background-color: $c-dark;
+          border-color: $c-dark;
+        }
+      }
+    }
+
+    .social-block__link {
+      &:hover {
+        color: $c-dark;
+      }
+    }
+  }
+
+  &--index-2 {
+    .page-header__menu {
+      a {
+        &:hover,
+        &:focus {
+          color: $c-light-blue;
+
+          &::after {
+            background-color: $c-light-blue;
+          }
+        }
+      }
+    }
+
+    .social-block__toggler {
+      color: $c-dark-blue;
+
+      &::before {
+        background-color: $c-light;
+        border: 2px solid $c-light;
+      }
+
+      &:hover,
+      .social-block--active & {
+        color: $c-light-blue;
+      }
+
+      &:focus {
+        color: $c-light-blue;
+        border: 2px solid $c-light-blue;
+
+        &::before {
+          border-color: $c-dark-blue;
+        }
+      }
+
+      &:active,
+      &:active:focus {
+        color: $c-light-blue;
+
+        &::before {
+          background-color: $c-light-blue;
+          border-color: $c-light-blue;
+        }
+      }
+    }
+
+    .social-block__link {
+      &:hover {
+        color: $c-light-blue;
+      }
+    }
+  }
+
+  &--index-3 {
+    .page-header__menu {
+      a {
+        &:hover,
+        &:focus {
+          color: $c-dark-blue;
+
+          &::after {
+            background-color: $c-dark-blue;
+          }
+        }
+      }
+    }
+
+    .social-block__toggler {
+      color: $c-light-blue;
+
+      &::before {
+        background-color: $c-light;
+        border: 2px solid $c-light;
+      }
+
+      &:hover,
+      .social-block--active & {
+        color: $c-dark-blue;
+      }
+
+      &:focus {
+        color: $c-dark-blue;
+        border: 2px solid $c-dark-blue;
+
+        &::before {
+          border-color: $c-dark-blue;
+        }
+      }
+
+      &:active,
+      &:active:focus {
+        color: $c-dark-blue;
+
+        &::before {
+          background-color: $c-dark-blue;
+          border-color: $c-dark-blue;
+        }
+      }
+    }
+
+    .social-block__link {
+      &:hover {
+        color: $c-dark-blue;
+      }
+    }
+  }
+}
