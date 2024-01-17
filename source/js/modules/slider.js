@@ -53,11 +53,15 @@ export default () => {
           slideChange: () => {
             if (storySlider.activeIndex === 0) {
               sliderContainer.style.backgroundImage = `url("img/slide1.jpg")`;
+              document.body.className = "initialize slider-change--index-1";
             } else if (storySlider.activeIndex === 2) {
+              document.body.className = "initialize slider-change--index-2";
               sliderContainer.style.backgroundImage = `url("img/slide2.jpg")`;
             } else if (storySlider.activeIndex === 4) {
+              document.body.className = "initialize slider-change--index-3";
               sliderContainer.style.backgroundImage = `url("img/slide3.jpg")`;
             } else if (storySlider.activeIndex === 6) {
+              document.body.className = "initialize";
               sliderContainer.style.backgroundImage = `url("img/slide4.jpg")`;
             }
           },

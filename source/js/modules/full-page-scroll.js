@@ -100,38 +100,32 @@ export default class FullPageScroll {
 
   accentTypographyRun() {
     if(this.screenElements[this.activeScreen].id == 'top') {
-      const animationTopScreenTextLine = new AccentTypographyBuild(`.intro__title`, `text-word--intro`);
-        setTimeout(()=>{
-          animationTopScreenTextLine.runAnimation();
-        }, 500);
-        const animationDate = new AccentTypographyBuild(`.intro__date`, `text-word`);
-        setTimeout(()=>{
-          animationDate.runAnimation();
-        }, 1500);
+      document.body.className = "initialize";
+      this.accentTypography(`.intro__title`, `text-word--intro`, 500);
+      this.accentTypography(`.intro__date`, `text-word`, 1500);
     }
     else if(this.screenElements[this.activeScreen].id == 'story') {
-      const animationTopScreenTextLine = new AccentTypographyBuild(`.slider__item-title`, `text-word`);
-        setTimeout(()=>{
-          animationTopScreenTextLine.runAnimation();
-        }, 200);
+      document.body.className = "initialize slider-change--index-1";
+      this.accentTypography(`.slider__item-title`, `text-word`, 200);
     }
     else if(this.screenElements[this.activeScreen].id == 'prizes') {
-      const animationTopScreenTextLine = new AccentTypographyBuild(`.prizes__title`, `text-word`);
-        setTimeout(()=>{
-          animationTopScreenTextLine.runAnimation();
-        }, 200);
+      document.body.className = "initialize";
+      this.accentTypography(`.prizes__title`, `text-word`, 200);
     }
     else if(this.screenElements[this.activeScreen].id == 'rules') {
-      const animationTopScreenTextLine = new AccentTypographyBuild(`.rules__title`, `text-word`);
-        setTimeout(()=>{
-          animationTopScreenTextLine.runAnimation();
-        }, 200);
+      document.body.className = "initialize";
+      this.accentTypography(`.rules__title`, `text-word`, 200);
     }
     else if(this.screenElements[this.activeScreen].id == 'game') {
-      const animationTopScreenTextLine = new AccentTypographyBuild(`.game__title`, `text-word`);
-        setTimeout(()=>{
-          animationTopScreenTextLine.runAnimation();
-        }, 200);
+      document.body.className = "initialize";
+      this.accentTypography(`.game__title`, `text-word`, 200);
     }
+  }
+
+  accentTypography(classname1, classname2, delay) {
+    const animationTopScreenTextLine = new AccentTypographyBuild(classname1, classname2);
+    setTimeout(()=>{
+      animationTopScreenTextLine.runAnimation();
+    }, delay);
   }
 }
