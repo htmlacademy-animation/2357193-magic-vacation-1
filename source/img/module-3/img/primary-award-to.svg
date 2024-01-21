@@ -12,7 +12,8 @@
     <path d="M275,225.43H257.87a17.6,17.6,0,0,1-17.52-17.58V170a17.6,17.6,0,0,1,17.52-17.58H275A17.6,17.6,0,0,1,292.51,170v37.83A17.61,17.61,0,0,1,275,225.43Z" fill="none" stroke="#fff" stroke-width="2"/>
   </g>
   <g clip-path="url(#window)">
-    <g transform="translate(220 160)">
+    <g id="clouds" transform="translate(220 160)">
+      <animateTransform attributeName="transform" type="translate" values="320 160; -100 160;" keyTimes="0; 1" calcMode="linear" dur="4s" repeatCount="indefinite"/>
       <line x1="28.18" y1="38.34" x2="91.09" y2="38.34" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
       <path d="M41.77,97.54H77.06a12.4,12.4,0,1,1,24.8,0h17.93" transform="translate(-40.77 -69.46)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
       <line x1="218.19" y1="23.72" x2="257.97" y2="23.72" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
@@ -20,7 +21,7 @@
       <line x1="246.24" y1="13.45" x2="268.43" y2="13.45" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
     </g>
   </g>
-  <g>
+  <g id="chair">
     <path d="M257.5,259.82H196.76V245.63h55.09a9.92,9.92,0,0,1,9.9,9.93,4.26,4.26,0,0,1-4.25,4.25" fill="#a67ee5"/>
     <path d="M257.5,259.82H196.76V245.63h55.09a9.92,9.92,0,0,1,9.9,9.93A4.26,4.26,0,0,1,257.5,259.82Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
     <polygon points="185.47 328.31 171.5 328.31 165.19 286.72 179.16 286.72 185.47 328.31" fill="#a67ee5"/>
@@ -35,7 +36,15 @@
     <path d="M206.26,259.82h-72l-2.13-14.19H200.6a9.92,9.92,0,0,1,9.9,9.93A4.26,4.26,0,0,1,206.26,259.82Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
     <line x1="151.57" y1="195.44" x2="209.05" y2="195.44" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
   </g>
-  <g>
+  <g id="branch" transform-origin="40% 100%">
+    <animateTransform attributeName="transform"
+                        type="rotate"
+                        values="-10; 9; -8; 7; -5; 3; -2; 1"
+                        keyTimes="0; 0.15; 0.3; 0.45; 0.6; 0.75; 0.92; 1"
+                        calcMode="linear"
+                        dur="3s"
+                        begin="6s"
+                        fill="freeze" />
     <path d="M79.18,194A131,131,0,0,1,94.77,220.9a255,255,0,0,1-20.08-23.55,259,259,0,0,1-17.07-25.88A131.72,131.72,0,0,1,79.18,194" fill="#36e69a"/>
     <path d="M80.94,214.39a127.19,127.19,0,0,1,22.8,20.49A242.09,242.09,0,0,1,77.9,219.17a235.86,235.86,0,0,1-23.42-18.7,119.82,119.82,0,0,1,26.46,13.92" fill="#36e69a"/>
     <path d="M93.66,205.48a258.38,258.38,0,0,0,10.08,29.39,125.63,125.63,0,0,0-4.5-30.52,135.9,135.9,0,0,0-12.06-29.44,260.33,260.33,0,0,0,6.47,30.57" fill="#36e69a"/>

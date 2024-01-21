@@ -8,6 +8,28 @@
   }
 }
 
+@keyframes fadeInJourney {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+
+  100% {
+    display: flex;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    display: block;
+  }
+
+  100% {
+    display: none;
+  }
+}
+
 @keyframes fadeInBottom {
   0% {
     opacity: 0;
