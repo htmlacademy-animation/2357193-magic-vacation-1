@@ -22,6 +22,7 @@
     text-transform: uppercase;
     font-size: 1.2rem;
     line-height: 1.2;
+    animation: fadeIn 1s ease-in;
 
     @media (min-width: $stop-scaling) {
       font-size: 12px;
