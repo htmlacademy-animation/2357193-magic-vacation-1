@@ -59,6 +59,13 @@ export default class FullPageScroll {
 
     this.accentTypographyRun();
 
+    if(this.screenElements[this.activeScreen].id == 'prizes') {
+      setTimeout(() => {
+        let svgDocument = document.querySelector(".prizes__item--cases>").getSVGDocument();
+        svgDocument.getElementById('clouds').beginElement();
+      }, 6000);
+    }
+
     this.screenElements.forEach((screen) => {
       screen.classList.add(`screen--hidden`);
         screen.classList.remove(`active`);
