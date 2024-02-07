@@ -92,8 +92,8 @@
   position: relative;
   top: 50%;
   left: 50%;
-  width: 26.8rem;
-  animation: fadeOut 1s ease-out 5s both;
+  width: 30.8rem;
+  //animation: fadeOut 1s ease-out 5s both;
 
   @media (max-width: $mobile) {
     left: 0%;
@@ -106,7 +106,7 @@
   justify-content: flex-end;
   align-items: flex-end;
   margin-top: auto;
-  animation: fadeInJourney 1s ease-out 6s both;
+  //animation: fadeInJourney 1s ease-out 6s both;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     flex-direction: column;
@@ -148,6 +148,7 @@
       position: relative;
       left: -5.9rem;
       width: 26.8rem;
+      //animation: fadeInJourney 0.5s ease-in 0.1s both;
 
       @media (min-width: $stop-scaling) {
         left: -59px;
@@ -174,6 +175,7 @@
 
   &--cases {
     margin-left: 7rem;
+    //animation: fadeInJourney 0.5s ease-in 5s both;
 
     @media (min-width: $stop-scaling) {
       margin-left: 70px;
@@ -185,28 +187,35 @@
     }
 
     .prizes__icon {
-      width: 18.8rem;
+      width: 28rem;
+      margin-left: -11rem;
 
       @media (min-width: $stop-scaling) {
+        margin-left: 0;
         width: 188px;
       }
 
       @media (max-width: $tablet) and (orientation: portrait) {
+        margin-left: 0;
         margin-right: 1.3rem;
         width: 10.211rem;
       }
 
       @media (max-width: $tablet) and (orientation: landscape) {
+        margin-left: 0;
         width: 9.5rem;
       }
 
       @media (max-width: $mobile) and (orientation: landscape) {
+        margin-left: 0;
         width: 7rem;
       }
     }
   }
 
   &--codes {
+    //animation: fadeInJourney 0.5s ease-in 10s both;
+
     @media (max-width: $tablet) and (orientation: portrait) {
       padding-left: 0.8rem;
     }
