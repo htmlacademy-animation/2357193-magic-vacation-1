@@ -106,7 +106,6 @@
   justify-content: flex-end;
   align-items: flex-end;
   margin-top: auto;
-  //animation: fadeInJourney 1s ease-out 6s both;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     flex-direction: column;
@@ -147,8 +146,7 @@
     .prizes__icon {
       position: relative;
       left: -5.9rem;
-      width: 26.8rem;
-      //animation: fadeInJourney 0.5s ease-in 0.1s both;
+      width: 26rem;
 
       @media (min-width: $stop-scaling) {
         left: -59px;
@@ -175,7 +173,7 @@
 
   &--cases {
     margin-left: 7rem;
-    //animation: fadeInJourney 0.5s ease-in 5s both;
+    animation: fadeInJourney 0.2s ease-in 5s both;
 
     @media (min-width: $stop-scaling) {
       margin-left: 70px;
@@ -187,7 +185,7 @@
     }
 
     .prizes__icon {
-      width: 28rem;
+      width: 26rem;
       margin-left: -11rem;
 
       @media (min-width: $stop-scaling) {
@@ -214,7 +212,7 @@
   }
 
   &--codes {
-    //animation: fadeInJourney 0.5s ease-in 10s both;
+    animation: fadeInJourney 0.5s ease-in 9s both;
 
     @media (max-width: $tablet) and (orientation: portrait) {
       padding-left: 0.8rem;

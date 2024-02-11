@@ -20,6 +20,26 @@
   }
 }
 
+@keyframes moveLeftPrimaryAward {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes moveLeftSecondaryAward {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @keyframes fadeOut {
   0% {
     display: block;

@@ -59,12 +59,20 @@ export default class FullPageScroll {
 
     this.accentTypographyRun();
 
-    if(this.screenElements[this.activeScreen].id == 'prizes') {
+    /*if(this.screenElements[this.activeScreen].id == 'prizes') {
+      let primaryAward = document.getElementById("dirigableBladesAnimate");
+      primaryAward.beginElement();
+
       setTimeout(() => {
-        let svgDocument = document.querySelector(".prizes__item--cases>").getSVGDocument();
-        svgDocument.getElementById('clouds').beginElement();
-      }, 6000);
-    }
+        let secondaryAward = document.getElementById("cloudsFadeIn");
+        secondaryAward.beginElement();
+      }, 5000);
+
+      setTimeout(() => {
+        let additionalAward = document.getElementById("suitcaseUpFadeOut");
+        additionalAward.beginElement();
+      }, 12000);
+    }*/
 
     this.screenElements.forEach((screen) => {
       screen.classList.add(`screen--hidden`);
