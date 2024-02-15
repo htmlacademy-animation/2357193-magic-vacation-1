@@ -59,7 +59,7 @@ export default class FullPageScroll {
 
     this.accentTypographyRun();
 
-    /*if(this.screenElements[this.activeScreen].id == 'prizes') {
+    if(this.screenElements[this.activeScreen].id == 'prizes') {
       let primaryAward = document.getElementById("dirigableBladesAnimate");
       primaryAward.beginElement();
 
@@ -71,8 +71,8 @@ export default class FullPageScroll {
       setTimeout(() => {
         let additionalAward = document.getElementById("suitcaseUpFadeOut");
         additionalAward.beginElement();
-      }, 12000);
-    }*/
+      }, 10000);
+    }
 
     this.screenElements.forEach((screen) => {
       screen.classList.add(`screen--hidden`);
