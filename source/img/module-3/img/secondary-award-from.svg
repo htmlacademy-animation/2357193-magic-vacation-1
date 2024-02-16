@@ -3,7 +3,7 @@
     <animate id="cloudsFadeIn"
              attributeType="CSS" 
              attributeName="opacity" 
-             begin="5s" 
+             begin="click" 
              values="0; 1" 
              keyTimes="0; 1" 
              dur="0.3s" 

@@ -22,6 +22,12 @@ export default () => {
         });
         targetEl[0].classList.add(`screen--show`);
         targetEl[0].classList.remove(`screen--hidden`);
+
+        setTimeout(() => {
+          let resultTextAnimate = document.getElementById("first");
+          resultTextAnimate.beginElement();
+        }, 500);
+        
       });
     }
 

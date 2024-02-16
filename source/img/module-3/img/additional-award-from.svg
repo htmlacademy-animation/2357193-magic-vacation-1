@@ -3,7 +3,7 @@
     <animate id="suitcaseUpFadeOut"
               attributeType="CSS" 
               attributeName="opacity" 
-              begin="10s" 
+              begin="click" 
               values="1; 0" 
               keyTimes="0; 1" 
               dur="0.1s" 
