@@ -1,5 +1,6 @@
 import throttle from 'lodash/throttle';
 import AccentTypographyBuild from './accentTypographyBuild';
+import Timer from './timer';
 
 export default class FullPageScroll {
   constructor() {
@@ -14,12 +15,12 @@ export default class FullPageScroll {
     this.activeScreen = 0;
     this.onScrollHandler = this.onScroll.bind(this);
     this.onUrlHashChengedHandler = this.onUrlHashChanged.bind(this);
+    this.timer = new Timer();
   }
 
   init() {
     document.addEventListener(`wheel`, throttle(this.onScrollHandler, this.THROTTLE_TIMEOUT, {trailing: true}));
     window.addEventListener(`popstate`, this.onUrlHashChengedHandler);
-
     this.onUrlHashChanged();
   }
 
@@ -72,6 +73,10 @@ export default class FullPageScroll {
         let additionalAward = document.getElementById("suitcaseUpFadeOut");
         additionalAward.beginElement();
       }, 10000);
+    }
+
+    if(this.screenElements[this.activeScreen].id == 'game') {
+      this.timer.start();
     }
 
     this.screenElements.forEach((screen) => {
