@@ -1,6 +1,7 @@
 import throttle from 'lodash/throttle';
 import AccentTypographyBuild from './accentTypographyBuild';
 import Timer from './timer';
+import AnimateNumber from './animateNumber';
 
 export default class FullPageScroll {
   constructor() {
@@ -11,11 +12,17 @@ export default class FullPageScroll {
     this.screenElements = document.querySelectorAll(`.screen:not(.screen--result)`);
     this.menuElements = document.querySelectorAll(`.page-header__menu .js-menu-link`);
     this.screenFill = document.querySelector(`.screen-fill`);
-
+    
     this.activeScreen = 0;
     this.onScrollHandler = this.onScroll.bind(this);
     this.onUrlHashChengedHandler = this.onUrlHashChanged.bind(this);
     this.timer = new Timer();
+    this.animatePrimaryNumber = new AnimateNumber(1, ".prizes__desc--primary-number", 1, 3, 1);
+    this.animateSecondaryNumber = new AnimateNumber(10, ".prizes__desc--secondary-number", 1, 7, 1);
+    this.animateAdditNumber = new AnimateNumber(1000, ".prizes__desc--additional-number", 11, 900, 17);
+
+    this.prizesDescs = document.querySelectorAll('.prizes__desc');
+    this.prizesDescsText = document.querySelectorAll('.prizes__desc--text');
   }
 
   init() {
@@ -60,20 +67,7 @@ export default class FullPageScroll {
 
     this.accentTypographyRun();
 
-    if(this.screenElements[this.activeScreen].id == 'prizes') {
-      let primaryAward = document.getElementById("dirigableBladesAnimate");
-      primaryAward.beginElement();
-
-      setTimeout(() => {
-        let secondaryAward = document.getElementById("cloudsFadeIn");
-        secondaryAward.beginElement();
-      }, 5000);
-
-      setTimeout(() => {
-        let additionalAward = document.getElementById("suitcaseUpFadeOut");
-        additionalAward.beginElement();
-      }, 10000);
-    }
+    this.prizesAnimation();
 
     if(this.screenElements[this.activeScreen].id == 'game') {
       this.timer.start();
@@ -147,5 +141,34 @@ export default class FullPageScroll {
     setTimeout(()=>{
       animationTopScreenTextLine.runAnimation();
     }, delay);
+  }
+
+  prizesAnimation() {
+    if(this.screenElements[this.activeScreen].id == 'prizes') {
+      let primaryAward = document.getElementById("dirigableBladesAnimate");
+      primaryAward.beginElement();
+
+      setTimeout(() => {
+        this.animatePrimaryNumber.start();
+        this.prizesDescs[0].classList.add('prizes__desc--animation');
+        this.prizesDescsText[0].classList.add('animation-fade-in-right');
+      }, 3500);
+
+      setTimeout(() => {
+        let secondaryAward = document.getElementById("cloudsFadeIn");
+        secondaryAward.beginElement();
+        this.animateSecondaryNumber.start();
+        this.prizesDescs[1].classList.add('prizes__desc--animation');
+        this.prizesDescsText[1].classList.add('animation-fade-in-right');
+      }, 6000);
+
+      setTimeout(() => {
+        let additionalAward = document.getElementById("suitcaseUpFadeOut");
+        additionalAward.beginElement();
+        this.animateAdditNumber.start();
+        this.prizesDescs[2].classList.add('prizes__desc--animation');
+        this.prizesDescsText[2].classList.add('animation-fade-in-right');
+      }, 10000);
+    }
   }
 }
