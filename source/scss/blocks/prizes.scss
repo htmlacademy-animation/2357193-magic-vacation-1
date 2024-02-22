@@ -246,6 +246,7 @@
   margin: 5.6rem 0 0 0;
   font-size: 1.8rem;
   line-height: 1.1;
+  opacity: 0;
 
   @media (min-width: $stop-scaling) {
     margin-top: 56px;
@@ -340,4 +341,20 @@
       height: 0.5rem;
     }
   }
+}
+
+.prizes__desc--animation {
+  animation: fadeIn 0.3s ease-in forwards;
+}
+
+.prizes__desc--secondary-number {
+  width: 4rem;
+}
+
+.prizes__desc--additional-number {
+  width: 18rem;
+}
+
+.animation-fade-in-right {
+  animation: fadeInRight 0.3s ease-in forwards;
 }
