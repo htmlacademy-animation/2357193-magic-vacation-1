@@ -10,6 +10,8 @@ import social from './modules/social.js';
 import AccentTypographyBuild from './modules/accentTypographyBuild.js';
 import FullPageScroll from './modules/full-page-scroll';
 import body from './modules/body.js';
+import Scene2DSeaCalf from './modules/scene-2d-sea-calf.js';
+
 
 // init modules
 mobileHeight();
@@ -24,3 +26,5 @@ body();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
+
+const scene = new Scene2DSeaCalf();
