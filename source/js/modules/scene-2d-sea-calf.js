@@ -4,12 +4,12 @@ import _ from './utils.js';
 
 
 const IMAGES_URLS = Object.freeze({
-  plane: `/img/module-4/win-primary-images/airplane.png`,
-  tree: `/img/module-4/win-primary-images/tree.png`,
-  tree2: `/img/module-4/win-primary-images/tree 2.png`,
-  ice: `/img/module-4/win-primary-images/ice.png`,
-  seaCalf: `/img/module-4/win-primary-images/sea-calf-2.png`,
-  snowflake: `/img/module-4/win-primary-images/snowflake.png`
+  plane: `../img/module-4/win-primary-images/airplane.png`,
+  tree: `../img/module-4/win-primary-images/tree.png`,
+  tree2: `../img/module-4/win-primary-images/tree 2.png`,
+  ice: `../img/module-4/win-primary-images/ice.png`,
+  seaCalf: `../img/module-4/win-primary-images/sea-calf-2.png`,
+  snowflake: `../img/module-4/win-primary-images/snowflake.png`
 });
 
 
