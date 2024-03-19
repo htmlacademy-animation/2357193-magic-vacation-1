@@ -11030,7 +11030,7 @@ const IMAGES_URLS = Object.freeze({
   tree2: `../img/module-4/win-primary-images/tree 2.png`,
   ice: `../img/module-4/win-primary-images/ice.png`,
   seaCalf: `../img/module-4/win-primary-images/sea-calf-2.png`,
-  snowflake: `../img/module-4/win-primary-images/snowflake.png`
+  snowflake: `../img/snowflake.png`
 });
 
 
