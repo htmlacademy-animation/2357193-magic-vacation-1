@@ -1,3 +1,5 @@
+import Scene2DSeaCalf from './scene-2d-sea-calf.js';
+
 export default () => {
   let showResultEls = document.querySelectorAll(`.js-show-result`);
   let results = document.querySelectorAll(`.screen--result`);
@@ -5,6 +7,10 @@ export default () => {
     for (let i = 0; i < showResultEls.length; i++) {
       showResultEls[i].addEventListener(`click`, function () {
         let target = showResultEls[i].getAttribute(`data-target`);
+
+        if(target == "result") {
+          new Scene2DSeaCalf();
+        }
 
         const event = new CustomEvent(`show-result`, {
           detail: {
@@ -27,7 +33,6 @@ export default () => {
           let resultTextAnimate = document.getElementById("first");
           resultTextAnimate.beginElement();
         }, 500);
-        
       });
     }
 

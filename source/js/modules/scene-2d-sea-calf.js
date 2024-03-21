@@ -178,7 +178,7 @@ export default class Scene2DSeaCalf extends Scene2D {
         this.objects.plane.opacity = progress;
       },
       duration: 500,
-      delay: 1200,
+      delay: 400,
       easing: _.easeInQuad
     }));
   }
@@ -198,7 +198,7 @@ export default class Scene2DSeaCalf extends Scene2D {
         this.locals.blob.opacity = progress;
       },
       duration: 500,
-      delay: 1200,
+      delay: 400,
       easing: _.easeInQuad
     }));
   }
@@ -211,7 +211,7 @@ export default class Scene2DSeaCalf extends Scene2D {
         this.objects.tree.opacity = progress;
       },
       duration: 500,
-      delay: 1200,
+      delay: 400,
       easing: _.easeInQuad
     }));
 
@@ -221,7 +221,7 @@ export default class Scene2DSeaCalf extends Scene2D {
         this.objects.tree2.opacity = progress;
       },
       duration: 500,
-      delay: 1500,
+      delay: 700,
       easing: _.easeInQuad
     }));
   }
@@ -239,7 +239,7 @@ export default class Scene2DSeaCalf extends Scene2D {
         this.objects.ice.transforms.rotate = -30 * Math.sin(progressReversed * 2);
       },
       duration: 2000,
-      delay: 1000,
+      delay: 200,
       easing: _.easeOutElastic
     }));
 
@@ -249,7 +249,7 @@ export default class Scene2DSeaCalf extends Scene2D {
         this.objects.ice.opacity = progress;
       },
       duration: 100,
-      delay: 1000,
+      delay: 200,
       easing: _.easeInQuad
     }));
   }
@@ -270,7 +270,7 @@ export default class Scene2DSeaCalf extends Scene2D {
           2 * Math.sin(1.5 * (details.currentTime - details.startTime) / 1000);
       },
       duration: `infinite`,
-      delay: 800
+      delay: 0
     }));
 
     this.animations.push(new Animation({
@@ -278,7 +278,7 @@ export default class Scene2DSeaCalf extends Scene2D {
         this.objects.snowflake.opacity = progress;
       },
       duration: 500,
-      delay: 1500,
+      delay: 700,
       easing: _.easeInQuad
     }));
 
@@ -287,7 +287,7 @@ export default class Scene2DSeaCalf extends Scene2D {
         this.objects.snowflake2.opacity = progress;
       },
       duration: 500,
-      delay: 1900,
+      delay: 1100,
       easing: _.easeInQuad
     }));
   }

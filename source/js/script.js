@@ -27,4 +27,4 @@ body();
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
 
-const scene = new Scene2DSeaCalf();
+//const scene = new Scene2DSeaCalf();
