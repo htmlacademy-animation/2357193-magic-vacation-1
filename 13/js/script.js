@@ -10957,6 +10957,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _scene_2d_sea_calf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scene-2d-sea-calf.js */ "./source/js/modules/scene-2d-sea-calf.js");
+
+
 /* harmony default export */ __webpack_exports__["default"] = (() => {
   let showResultEls = document.querySelectorAll(`.js-show-result`);
   let results = document.querySelectorAll(`.screen--result`);
@@ -10964,6 +10967,10 @@ __webpack_require__.r(__webpack_exports__);
     for (let i = 0; i < showResultEls.length; i++) {
       showResultEls[i].addEventListener(`click`, function () {
         let target = showResultEls[i].getAttribute(`data-target`);
+
+        if(target == "result") {
+          new _scene_2d_sea_calf_js__WEBPACK_IMPORTED_MODULE_0__["default"]();
+        }
 
         const event = new CustomEvent(`show-result`, {
           detail: {
@@ -10986,7 +10993,6 @@ __webpack_require__.r(__webpack_exports__);
           let resultTextAnimate = document.getElementById("first");
           resultTextAnimate.beginElement();
         }, 500);
-        
       });
     }
 
@@ -11199,7 +11205,7 @@ class Scene2DSeaCalf extends _scene_2d_js__WEBPACK_IMPORTED_MODULE_1__["default"
         this.objects.plane.opacity = progress;
       },
       duration: 500,
-      delay: 1200,
+      delay: 400,
       easing: _utils_js__WEBPACK_IMPORTED_MODULE_2__["default"].easeInQuad
     }));
   }
@@ -11219,7 +11225,7 @@ class Scene2DSeaCalf extends _scene_2d_js__WEBPACK_IMPORTED_MODULE_1__["default"
         this.locals.blob.opacity = progress;
       },
       duration: 500,
-      delay: 1200,
+      delay: 400,
       easing: _utils_js__WEBPACK_IMPORTED_MODULE_2__["default"].easeInQuad
     }));
   }
@@ -11232,7 +11238,7 @@ class Scene2DSeaCalf extends _scene_2d_js__WEBPACK_IMPORTED_MODULE_1__["default"
         this.objects.tree.opacity = progress;
       },
       duration: 500,
-      delay: 1200,
+      delay: 400,
       easing: _utils_js__WEBPACK_IMPORTED_MODULE_2__["default"].easeInQuad
     }));
 
@@ -11242,7 +11248,7 @@ class Scene2DSeaCalf extends _scene_2d_js__WEBPACK_IMPORTED_MODULE_1__["default"
         this.objects.tree2.opacity = progress;
       },
       duration: 500,
-      delay: 1500,
+      delay: 700,
       easing: _utils_js__WEBPACK_IMPORTED_MODULE_2__["default"].easeInQuad
     }));
   }
@@ -11260,7 +11266,7 @@ class Scene2DSeaCalf extends _scene_2d_js__WEBPACK_IMPORTED_MODULE_1__["default"
         this.objects.ice.transforms.rotate = -30 * Math.sin(progressReversed * 2);
       },
       duration: 2000,
-      delay: 1000,
+      delay: 200,
       easing: _utils_js__WEBPACK_IMPORTED_MODULE_2__["default"].easeOutElastic
     }));
 
@@ -11270,7 +11276,7 @@ class Scene2DSeaCalf extends _scene_2d_js__WEBPACK_IMPORTED_MODULE_1__["default"
         this.objects.ice.opacity = progress;
       },
       duration: 100,
-      delay: 1000,
+      delay: 200,
       easing: _utils_js__WEBPACK_IMPORTED_MODULE_2__["default"].easeInQuad
     }));
   }
@@ -11291,7 +11297,7 @@ class Scene2DSeaCalf extends _scene_2d_js__WEBPACK_IMPORTED_MODULE_1__["default"
           2 * Math.sin(1.5 * (details.currentTime - details.startTime) / 1000);
       },
       duration: `infinite`,
-      delay: 800
+      delay: 0
     }));
 
     this.animations.push(new _animation_js__WEBPACK_IMPORTED_MODULE_0__["default"]({
@@ -11299,7 +11305,7 @@ class Scene2DSeaCalf extends _scene_2d_js__WEBPACK_IMPORTED_MODULE_1__["default"
         this.objects.snowflake.opacity = progress;
       },
       duration: 500,
-      delay: 1500,
+      delay: 700,
       easing: _utils_js__WEBPACK_IMPORTED_MODULE_2__["default"].easeInQuad
     }));
 
@@ -11308,7 +11314,7 @@ class Scene2DSeaCalf extends _scene_2d_js__WEBPACK_IMPORTED_MODULE_1__["default"
         this.objects.snowflake2.opacity = progress;
       },
       duration: 500,
-      delay: 1900,
+      delay: 1100,
       easing: _utils_js__WEBPACK_IMPORTED_MODULE_2__["default"].easeInQuad
     }));
   }
@@ -11951,7 +11957,7 @@ Object(_modules_body_js__WEBPACK_IMPORTED_MODULE_10__["default"])();
 const fullPageScroll = new _modules_full_page_scroll__WEBPACK_IMPORTED_MODULE_9__["default"]();
 fullPageScroll.init();
 
-const scene = new _modules_scene_2d_sea_calf_js__WEBPACK_IMPORTED_MODULE_11__["default"]();
+//const scene = new Scene2DSeaCalf();
 
 
 /***/ }),
